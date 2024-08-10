@@ -20,6 +20,7 @@ router.get('', async (req, res) => {
     try {
         console.log('calling data  === >>>>');
         const response = await menuItem.find();
+        const count = await menuItem.count()
         res.status(200).json({ result: response });
         console.log('data fetch');
     } catch (error) {
