@@ -1,8 +1,8 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
-// const mongoDbURL = 'mongodb://localhost:27017/hotel'
+// const mongoDbURL = process.env.DB_URL_LOCAL;
 const mongoDbURL = process.env.DB_URL;
-mongoose.connect(mongoDbURL,{
+mongoose.connect(`${mongoDbURL}`,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
