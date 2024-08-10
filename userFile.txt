@@ -1,0 +1,20 @@
+// console.log('server file is running');
+
+// let add = ((a,b,fun)=>{ let res= a +b ; console.log(`adding two number ${res}`);fun()})
+
+// add(4,6,()=>{console.log('calling callback')})
+// const os = require('os')
+// const fs =require('fs')
+
+// let userInfo = os.userInfo()
+// console.log(userInfo);
+
+// fs.appendFile('userFile.txt',`hello ${userInfo.username} !\n`,()=>{
+// console.log('file created successfully...');
+// })
+const notes = require('./notes/user.js')
+
+let age = notes.age
+
+
+console.log(age , notes.calculate(23,45) ,'age data');
